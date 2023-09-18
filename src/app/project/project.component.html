@@ -1,0 +1,11 @@
+<div>
+  <h2>Projects</h2>
+  <input type="text" [(ngModel)]="newProject" placeholder="Add a project" (keyup.enter)="addProject()">
+  <button (click)="addProject()">Add</button>
+  <ul>
+    <li *ngFor="let project of projects; let i = index">
+      {{ project.description }}
+      <button (click)="removeProject(project.projectId)">Remove</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,8 @@
+<ul>
+    <li *ngIf="!isAuthenticated()"><a routerLink="/register">Register</a></li>
+    <li *ngIf="!isAuthenticated()"><a routerLink="/login">Login</a></li>
+    <li *ngIf="isAuthenticated()"><a routerLink="/projects">Projects</a></li>
+    <li *ngIf="isAuthenticated()"><a routerLink="/tasks">Tasks</a></li>
+    <button *ngIf="isAuthenticated()" (click)="logout()">Logout</button>
+  </ul>
+  
